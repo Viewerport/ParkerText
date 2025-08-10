@@ -17,8 +17,8 @@
 </head="viewport">
 
 <script>
-	var normalText = document.getElementById("normalText");
-	var parkerText = "";
+	var originalText = document.getElementById("normalText");
+	var newText = "";
 
 	var keyboard = [
 		["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
@@ -39,12 +39,12 @@
 		return false;
 	}
 
-	for (var i = 0; i < normalText.length; i ++){
-		var letter = normalText.charAt(i);
+	for (var i = 0; i < newText.length; i ++){
+		var letter = newText.charAt(i);
 		var keyboardIndex = 0;
 
-		var rand1 = Math.round(Math.cos((i + 100) * normalText.length * 1000) / 2 + 0.5) === 0 ? -1 : 1;
-		var rand2 = Math.round(Math.sin((i + 100) * normalText.length * 1000) / 2 + 0.5) === 0 ? -1 : 1;
+		var rand1 = Math.round(Math.cos((i + 100) * newText.length * 1000) / 2 + 0.5) === 0 ? -1 : 1;
+		var rand2 = Math.round(Math.sin((i + 100) * newText.length * 1000) / 2 + 0.5) === 0 ? -1 : 1;
 
 		for (var j = 0; j < keyboard.length; j ++){
 			for (var k = 0; k < keyboard[j].length; j ++){
@@ -57,10 +57,10 @@
 		keyboardIndex[0] = constrain(keyboardIndex[0] + rand1, 0, 2);
 		keyboardIndex[1] = constrain(keyboardIndex[1] + rand2, 0, keyboard[keyboardIndex[0]].length - 1);
 
-		parkerText += keyboard[keyboardIndex[0]][keyboardIndex[1]];
+		newText += keyboard[keyboardIndex[0]][keyboardIndex[1]];
 	}
 
-	document.getElementById("parkerText").textContent = parkerText;
+	document.getElementById("parkerText").textContent = newText;
 </script>
 
 <noscript>Your browser doesn't support JavaScript 🤪</noscript>
