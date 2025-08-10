@@ -12,7 +12,7 @@
 	name = "normalText"
 	id = "normalText"/>
 
-<h2>Nothing right now</h2>
+<p id="parkerText">Nothing right now</p>
 
 </head="viewport">
 
@@ -60,7 +60,7 @@
 		newText += keyboard[keyboardIndex[0]][keyboardIndex[1]];
 	}
 
-	document.getElementById("parkerText").textContent = newText;
+	document.getElementById("parkerText").innerHTML = newText;
 </script>
 
 <noscript>Your browser doesn't support JavaScript 🤪</noscript>
