@@ -41,7 +41,7 @@ function convertToParkerText(){
 		}
 
 		keyboardIndex[0] = constrain(keyboardIndex[0] + rand1, 0, 2);
-		keyboardIndex[1] = constrain(keyboardIndex[1] + rand2, 0, keyboard[keyboardIndex[0]].length - 1);
+		keyboardIndex[1] = constrain(keyboardIndex[1] + rand2, 0, Number(keyboard[keyboardIndex[0]].length) - 1);
 
 		if (!isCapital(keyboard[keyboardIndex[0]][keyboardIndex[1]])){
 			newText += keyboard[keyboardIndex[0]][keyboardIndex[1]].toLowerCase();
