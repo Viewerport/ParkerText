@@ -9,11 +9,11 @@ function convertToParkerText(){
 	];
 
 	for (var i = 0; i < originalText.length; i ++){
-		var letter = newText.charAt(i);
+		var letter = originalText.charAt(i);
 		var keyboardIndex = 0;
 
-		var rand1 = Math.round(Math.cos((i + 100) * newText.length * 1000) / 2 + 0.5) === 0 ? -1 : 1;
-		var rand2 = Math.round(Math.sin((i + 100) * newText.length * 1000) / 2 + 0.5) === 0 ? -1 : 1;
+		var rand1 = Math.round(Math.cos((i + 100) * originalText.length * 1000) / 2 + 0.5) === 0 ? -1 : 1;
+		var rand2 = Math.round(Math.sin((i + 100) * originalText.length * 1000) / 2 + 0.5) === 0 ? -1 : 1;
 
 		for (var j = 0; j < keyboard.length; j ++){
 			for (var k = 0; k < keyboard[j].length; j ++){
