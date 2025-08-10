@@ -1,6 +1,6 @@
 function convertToParkerText(){
 	var originalText = document.getElementById("normalText");
-	var newText = "";
+	var newText = "a";
 
 	var keyboard = [
 		["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
