@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <htmt>
 <body>
+<style>
+	textarea {
+		height: auto;
+		resize: none;
+	}
+</style>
 
 <h1>Convert Normal Text to Parker Text</h1>
 
-<label for="normalText">Input normal text</label>
-<textarea
-	id = "normalText"
-	name = "normalText">The quick brown fox jumps over the lazy dog.
-</textarea>
+<label>
+	Input normal text
+	<textarea
+		id = "normalText"
+		name = "normalText"
+		cols = "40"
+		rows = "10"
+		placeholder = "Normal text here">
+	</textarea>
+</label>
 
 <button type="button" onclick="convertToParkerText()">Convert</button>
 
