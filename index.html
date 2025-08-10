@@ -10,7 +10,7 @@
 	name = "normalText"
 	id = "normalText"/>
 
-<p>Nothing right now</p>
+<p id="parkerText">Nothing right now</p>
 
 <script>
 	var originalText = document.getElementById("normalText");
@@ -55,7 +55,7 @@
 
 		newText += keyboard[keyboardIndex[0]][keyboardIndex[1]];
 	}
-
+	console.log(newText);
 	document.getElementById("parkerText").innerHTML = newText;
 </script>
 
