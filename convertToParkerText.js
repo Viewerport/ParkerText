@@ -27,8 +27,9 @@ function convertToParkerText(){
 		keyboardIndex[1] = constrain(keyboardIndex[1] + rand2, 0, keyboard[keyboardIndex[0]].length - 1);
 
 		newText += keyboard[keyboardIndex[0]][keyboardIndex[1]];
+		console.log(keyboard[keyboardIndex[0]][keyboardIndex[1]]);
 	}
 	console.log(String(newText));
-	console.log("This works");
+	
 	document.getElementById("parkerText").innerHTML = newText;
 }
