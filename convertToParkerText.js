@@ -8,7 +8,7 @@ function convertToParkerText(){
 		["Z", "X", "C", "V", "B", "N", "M"]
 	];
 
-	for (var i = 0; i < newText.length; i ++){
+	for (var i = 0; i < originalText.length; i ++){
 		var letter = newText.charAt(i);
 		var keyboardIndex = 0;
 
