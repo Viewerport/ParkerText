@@ -3,8 +3,6 @@
 <body>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head="viewport">
-
 <h1>Convert Normal Text to Parker Text</h1>
 
 <label for="normalText">Input normal text</label>
@@ -14,8 +12,53 @@
 
 <p>Nothing right now</p>
 
-</head="viewport">
+<script>
+	var originalText = document.getElementById("normalText");
+	var newText = "";
 
+	var keyboard = [
+		["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+		["A", "S", "D", "F", "G", "H", "J", "K", "L"],
+		["Z", "X", "C", "V", "B", "N", "M"]
+	];
 
+	var isLowercase = function(str){
+		if (str === str.toLowerCase()){
+			return true;
+		}
+		return false;
+	}
+	var isUppercase = function(str){
+		if (str === str.toUpperCase()){
+			return true;
+		}
+		return false;
+	}
+
+	for (var i = 0; i < newText.length; i ++){
+		var letter = newText.charAt(i);
+		var keyboardIndex = 0;
+
+		var rand1 = Math.round(Math.cos((i + 100) * newText.length * 1000) / 2 + 0.5) === 0 ? -1 : 1;
+		var rand2 = Math.round(Math.sin((i + 100) * newText.length * 1000) / 2 + 0.5) === 0 ? -1 : 1;
+
+		for (var j = 0; j < keyboard.length; j ++){
+			for (var k = 0; k < keyboard[j].length; j ++){
+				if (keyboard[j][k] === letter.toUpperCase()){
+					keyboardIndex = [j, k];
+				}
+			}
+		}
+
+		keyboardIndex[0] = constrain(keyboardIndex[0] + rand1, 0, 2);
+		keyboardIndex[1] = constrain(keyboardIndex[1] + rand2, 0, keyboard[keyboardIndex[0]].length - 1);
+
+		newText += keyboard[keyboardIndex[0]][keyboardIndex[1]];
+	}
+
+	document.getElementById("parkerText").innerHTML = newText;
+</script>
+
+<noscript>Your browser doesn't support JavaScript 🤪</noscript>
 </body>
 </html>
